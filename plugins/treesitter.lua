@@ -9,7 +9,7 @@ return {
     },
   },
 
-  --Syntax aware text-objects, select, move, swap, and peek support.
+  -- Syntax aware text-objects, select, move, swap, and peek support.
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     lazy = true, -- lazy loaded by mini.ai
