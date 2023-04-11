@@ -1,3 +1,29 @@
+-- close some filetypes with <q>
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "qf",
+    "help",
+    "man",
+    "notify",
+    "floatterm",
+    "lspinfo",
+    "lir",
+    "lsp-installer",
+    "null-ls-info",
+    "tsplayground",
+    "spectre_panel",
+    "startuptime",
+    "DressingSelect",
+    "Jaq",
+    "PlenaryTestPopup",
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>Close<CR>", { buffer = event.buf, silent = true })
+  end,
+  desc = "Close certain filetypes with q",
+})
+
 -- Enable spellcheck and line wrapping in text files
 vim.api.nvim_create_autocmd({ "FileType", }, {
   pattern = { "gitcommit", "markdown", "text" },
