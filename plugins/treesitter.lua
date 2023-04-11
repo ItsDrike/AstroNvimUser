@@ -13,7 +13,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     lazy = true, -- lazy loaded by mini.ai
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    dependencies = { "nvim-treesitter" },
   },
 
   -- View treesitter information directly in Neovim
