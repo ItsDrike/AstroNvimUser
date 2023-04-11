@@ -5,7 +5,8 @@ return {
     -- foldmethod = "expr",
     linebreak = true,                        -- linebreak soft wrap at words
     list = true,                             -- show some invisible characters (tabs...)
-    listchars = { tab = " ", trail = "·" }, -- specify what chars to show and with what symbols
+    listchars = { tab = " ", trail = "·" }, -- specify what chars to show and with what symbols (extends = "⟩", precedes = "⟨", eol = "﬋")
+    -- showbreak = "﬌ ",
   },
   g = {
     mapleader = " ",                   -- sets vim.g.mapleader
