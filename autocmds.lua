@@ -1,3 +1,12 @@
+-- Enable spellcheck and line wrapping in text files
+vim.api.nvim_create_autocmd({ "FileType", }, {
+  pattern = { "gitcommit", "markdown", "text" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+  end
+})
+
 -- Go to last loc when opening a buffer
 vim.api.nvim_create_autocmd("BufReadPost", {
   callback = function()
