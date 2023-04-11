@@ -41,5 +41,7 @@ return {
       }
       return opts
     end,
-  }
+  },
+
+  { "lvimuser/lsp-inlayhints.nvim", config = true },
 }
