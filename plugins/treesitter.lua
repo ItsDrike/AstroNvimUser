@@ -15,4 +15,14 @@ return {
     lazy = true, -- lazy loaded by mini.ai
     dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
+
+  -- View treesitter information directly in Neovim
+  {
+    "nvim-treesitter/playground",
+    cmd = {
+      "TSHighlightCapturesUnderCursor",
+      "TSPlaygroundToggle"
+    },
+    dependencies = { "nvim-treesitter" }
+  },
 }
