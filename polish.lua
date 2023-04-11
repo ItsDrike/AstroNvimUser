@@ -2,4 +2,5 @@
 -- anything that doesn't fit in the normal config can go here
 return function()
   require "user.abbreviations"
+  require "user.autocmds"
 end
