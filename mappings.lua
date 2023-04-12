@@ -27,4 +27,8 @@ maps.v["<A-p>"] = { '"_dP' }
 maps.n["cn"] = { "*``cgn" }
 maps.n["cn"] = { "*``cgN" }
 
+-- Stay in indent mode (astro vim also has <Tab>/<S-Tab>)
+maps.v["<"] = "<gv"
+maps.v[">"] = ">gv"
+
 return maps
