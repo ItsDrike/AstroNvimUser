@@ -17,7 +17,7 @@ return {
         "tsserver",
         "yamlls",
       },
-    }
+    },
   },
 
   {
@@ -32,7 +32,7 @@ return {
         null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.rustfmt,
-        null_ls.builtins.formatting.shfmt.with({ args = { "-i", "2" } }),
+        null_ls.builtins.formatting.shfmt.with { args = { "-i", "2" } },
         null_ls.builtins.diagnostics.luacheck,
         null_ls.builtins.diagnostics.flake8,
         -- null_ls.builtins.diagnostics.mypy,
