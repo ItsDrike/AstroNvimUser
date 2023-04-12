@@ -14,7 +14,7 @@ return function(client, bufnr)
   if client.server_capabilities.inlayHintProvider then
     local inlayhints_avail, inlayhints = pcall(require, "lsp-inlayhints")
     if inlayhints_avail then
-      inlayhints.on_attach(client, bufnr)
+      inlayhints.on_attach(client, bufnr, false)
       vim.keymap.set("n", "<leader>lH", function() inlayhints.toggle() end, { desc = "Toggle inlay hints" })
     end
   end
