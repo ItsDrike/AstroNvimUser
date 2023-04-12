@@ -80,7 +80,7 @@ return {
     "windwp/nvim-spectre",
     event = "VeryLazy",
     keys = {
-      { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+      { "<leader>fR", function() require("spectre").open() end, desc = "Find & Replace in files (Spectre)" },
     },
   },
 
