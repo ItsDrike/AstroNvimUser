@@ -1,4 +1,4 @@
-return {
+local options = {
   opt = {
     wrap = true, -- sets vim.opt.wrap
     -- foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
@@ -15,6 +15,14 @@ return {
     autopairs_enabled = true, -- enable autopairs at start
     diagnostics_enabled = true, -- enable diagnostics at start
     status_diagnostics_enabled = true, -- enable diagnostics in statusline
-    icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
   },
 }
+
+-- Disable icons in the UI if in TTY (needs nerd-fonts)
+if os.getenv "TERM" == "linux" then
+  options.g.icons_enabled = false
+else
+  options.g.icons_enabled = true -- Set to false here too if you don't have nerd-fonts
+end
+
+return options
