@@ -27,8 +27,4 @@ maps.v["<A-p>"] = { '"_dP' }
 maps.n["cn"] = { "*``cgn" }
 maps.n["cn"] = { "*``cgN" }
 
--- Better up/down, respecting wrapped lines
-maps.n["j"] = { "v:count == 0 ? 'gj' : 'j'", expr = true, silent = true }
-maps.n["k"] = { "v:count == 0 ? 'gk' : 'k'", expr = true, silent = true }
-
 return maps
