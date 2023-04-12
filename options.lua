@@ -5,7 +5,7 @@ return {
     -- foldmethod = "expr",
     linebreak = true,                        -- linebreak soft wrap at words
     list = true,                             -- show some invisible characters (tabs...)
-    listchars = { tab = " ", trail = "·" }, -- specify what chars to show and with what symbols (extends = "⟩", precedes = "⟨", eol = "﬋")
+    listchars = { tab = " ", trail = "·" }, -- specify what chars to show and with what symbols (extends = "⟩", precedes = "⟨", eol = "﬋", nbsp = "␣")
     -- showbreak = "﬌ ",
   },
   g = {
