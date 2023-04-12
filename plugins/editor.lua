@@ -6,9 +6,9 @@ return {
     opts = {
       -- providers: provider used to get references in the buffer, ordered by priority
       providers = {
-        'lsp',
-        'treesitter',
-        'regex',
+        "lsp",
+        "treesitter",
+        "regex",
       },
       delay = 120,
       -- Disable illuminate in these filetypes
@@ -38,12 +38,18 @@ return {
       vim.api.nvim_create_autocmd("FileType", {
         callback = function()
           local buffer = vim.api.nvim_get_current_buf()
-          vim.keymap.set("n", "]]", function()
-            require("illuminate")["goto_next_reference"](false)
-          end, { desc = "Next Reference", buffer = buffer })
-          vim.keymap.set("n", "[[", function()
-            require("illuminate")["goto_prev_reference"](false)
-          end, { desc = "Prev Reference", buffer = buffer })
+          vim.keymap.set(
+            "n",
+            "]]",
+            function() require("illuminate")["goto_next_reference"](false) end,
+            { desc = "Next Reference", buffer = buffer }
+          )
+          vim.keymap.set(
+            "n",
+            "[[",
+            function() require("illuminate")["goto_prev_reference"](false) end,
+            { desc = "Prev Reference", buffer = buffer }
+          )
         end,
       })
     end,
@@ -64,7 +70,7 @@ return {
         usages = {
           -- python = { "self", "cls" },
           -- lua = { "self', "_" }
-        }
+        },
       },
     },
   },
@@ -86,11 +92,11 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     config = true,
     keys = {
-      { "]t",         function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
-      { "[t",         function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
-      { "<leader>xt", "<cmd>TodoTrouble<CR>",                              desc = "Todo (Trouble)" },
-      { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>",      desc = "Todo/Fix/Fixme (Trouble)" },
-      { "<leader>st", "<cmd>TodoTelescope<CR>",                            desc = "Todo" },
+      { "]t", function() require("todo-comments").jump_next() end, desc = "Next todo comment" },
+      { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
+      { "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Todo (Trouble)" },
+      { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>", desc = "Todo/Fix/Fixme (Trouble)" },
+      { "<leader>st", "<cmd>TodoTelescope<CR>", desc = "Todo" },
     },
   },
 }
