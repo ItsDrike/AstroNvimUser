@@ -42,4 +42,24 @@ return {
   },
 
   { "lvimuser/lsp-inlayhints.nvim", config = true },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    dependencies = { "neovim/nvim-lspconfig" },
+    event = "InsertEnter",
+    opts = {
+      hint_prefix = vim.g.icons_enabled and "🐼 " or "[S] ",
+      hint_enable = true,
+      floating_window = false, -- virtual text only, can still use toggle_key to show the floating window
+      transparency = 20, -- make the floating window transparent
+      toggle_key = "<C-x>", -- toggle signature on/off in insert mode
+      doc_lines = 50,
+      max_height = 5,
+      bind = true,
+      handler_opts = {
+        border = "rounded",
+      },
+    },
+    config = function(_, opts) require("lsp_signature").on_attach(opts) end,
+  },
 }
