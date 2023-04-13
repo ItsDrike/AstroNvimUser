@@ -4,9 +4,15 @@ local options = {
     -- foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     -- foldmethod = "expr",
     linebreak = true, -- linebreak soft wrap at words
-    list = true, -- show some invisible characters (tabs...)
-    listchars = { tab = " ", trail = "·" }, -- specify what chars to show and with what symbols (extends = "⟩", precedes = "⟨", eol = "﬋", nbsp = "␣")
-    -- showbreak = "﬌ ",
+    list = true,      -- show some invisible characters (tabs...)
+    listchars = {
+      tab = " ",   -- Tab
+      trail = "·",   -- Trailing spaces
+      extends = "⟩", -- Character to show in last column when wrap is off and line continues
+      precedes = "⟨", -- Character to show in first column when there is text preceeding the first visible character
+      nbsp = "␣",   -- Non-breaking space
+    },                -- Show some special characters with specified symbols
+    showbreak = "﬌ ", -- String to put at the start of lines that have been wrapped.
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
