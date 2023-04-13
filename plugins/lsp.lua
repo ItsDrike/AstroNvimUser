@@ -58,6 +58,13 @@ return {
     config = true,
   },
 
+  -- Show LSP virtualtext diagnostics in a nicer way
+  {
+    "Maan2003/lsp_lines.nvim",
+    event = "User AstroFile",
+    config = true,
+  },
+
   -- Show function argument names and types as you're entering them
   {
     "ray-x/lsp_signature.nvim",
