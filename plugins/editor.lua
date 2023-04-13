@@ -94,7 +94,7 @@ return {
       { "[t", function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" },
       { "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Todo (Trouble)" },
       { "<leader>xT", "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>", desc = "Todo/Fix/Fixme (Trouble)" },
-      { "<leader>st", "<cmd>TodoTelescope<CR>", desc = "Todo" },
+      { "<leader>fT", "<cmd>TodoTelescope<CR>", desc = "Find Todos" },
     },
   },
 }
