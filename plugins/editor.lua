@@ -121,6 +121,50 @@ return {
     version = "*",
     cmd = { "TodoTrouble", "TodoTelescope" },
     event = { "BufReadPost", "BufNewFile" },
-    config = true,
+    opts = function()
+      local opts = {}
+
+      local icons
+      if vim.g.icons_enabled then
+        icons = {
+          FIX = " ",
+          TODO = " ",
+          HACK = " ",
+          WARN = " ",
+          PERF = " ",
+          NOTE = " ",
+          TEST = "⏲ ",
+        }
+      else
+        icons = {
+          FIX = "[Fix] ",
+          TODO = "[Todo] ",
+          HACK = "[Hack] ",
+          WARN = "[Warn] ",
+          PERF = "[Perf] ",
+          NOTE = "[Note] ",
+          TEST = "[Test] ",
+        }
+      end
+
+      opts.keywords = {
+        FIX = {
+          icon = icons.FIX, -- icon used for the sign, and in search results
+          color = "error", -- can be a hex color, or a named color (see below)
+          alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+          -- signs = false, -- configure signs for some keywords individually
+        },
+        TODO = { icon = icons.TODO, color = "info" },
+        HACK = { icon = icons.HACK, color = "warning" },
+        WARN = { icon = icons.WANR, color = "warning", alt = { "WARNING", "XXX" } },
+        PERF = { icon = icons.PERF, alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+        NOTE = { icon = icons.NOTE, color = "hint", alt = { "INFO" } },
+        TEST = { icon = icons.TEST, color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+      }
+
+      opts.signs = vim.g.icons_enabled
+
+      return opts
+    end,
   },
 }
