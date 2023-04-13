@@ -72,4 +72,17 @@ return {
     },
     config = function(_, opts) require("lsp_signature").on_attach(opts) end,
   },
+
+  -- Custom clangd LSP, with more features than the default one from lspconfig
+  {
+    "p00f/clangd_extensions.nvim",
+    dependencies = { "williamboman/mason-lspconfig.nvim" },
+    ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+    opts = function()
+      return {
+        server = require("astronvim.utils.lsp").config "clangd",
+        extensions = { autoSetHints = false },
+      }
+    end,
+  },
 }
