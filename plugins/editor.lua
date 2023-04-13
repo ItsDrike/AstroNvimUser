@@ -79,6 +79,7 @@ return {
   {
     "windwp/nvim-spectre",
     event = "VeryLazy",
+    config = true,
   },
 
   -- Highlight todo comments
