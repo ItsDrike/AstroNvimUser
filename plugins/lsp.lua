@@ -1,6 +1,6 @@
 return {
   {
-    "neovim/nvim-lspconfig",
+    "williamboman/mason-lspconfig.nvim",
     opts = {
       automatic_installation = true,
       ensure_installed = {
