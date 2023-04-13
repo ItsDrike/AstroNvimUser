@@ -122,7 +122,32 @@ return {
     cmd = { "TodoTrouble", "TodoTelescope" },
     event = { "BufReadPost", "BufNewFile" },
     opts = function()
-      local opts = {}
+      local opts = { search = {} }
+
+      opts.search.command = "rg"
+      opts.search.args = {
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+      }
+
+      -- Fall back to regular grep if ripgrep isn't available
+      vim.fn.system "which rg"
+      if vim.v.shell_error == 1 then
+        opts.search.command = "grep"
+        opts.search.args = {
+          "--recursive", -- Note: This may be very slow when ran from dir with a lot of children
+          "--color=never",
+          "--with-filename",
+          "--line-number",
+          "--binary-files=without-match",
+          "--byte-offset",
+          '--exclude-dir=".*"',
+          "--extended-regexp",
+        }
+      end
 
       local icons
       if vim.g.icons_enabled then
