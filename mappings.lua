@@ -1,3 +1,6 @@
+local utils = require "astronvim.utils"
+local is_available = utils.is_available
+
 local maps = { i = {}, n = {}, v = {}, t = {}, x = {} }
 
 maps.n["<C-t>"] = { "<F7>", desc = "ToggleTerm float", remap = true }
@@ -30,5 +33,20 @@ maps.n["cn"] = { "*``cgN" }
 -- Stay in indent mode (astro vim also has <Tab>/<S-Tab>)
 maps.v["<"] = "<gv"
 maps.v[">"] = ">gv"
+
+--
+-- Plugins
+--
+
+if is_available "vim-illuminate" then
+  maps.n["]]"] = { function() require("illuminate")["goto_next_reference"](false) end, desc = "Next Reference" }
+  maps.n["[["] = { function() require("illuminate")["goto_prev_reference"](false) end, desc = "Prev Reference" }
+  maps.v["]]"] = maps.n["]]"]
+  maps.v["[["] = maps.n["[["]
+end
+
+if is_available "nvim-spectre" then
+  maps.n["<leader>fR"] = { function() require("spectre").open() end, desc = "Find & Replace in files (Spectre)" }
+end
 
 return maps

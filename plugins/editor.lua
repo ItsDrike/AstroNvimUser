@@ -54,8 +54,8 @@ return {
       })
     end,
     keys = {
-      { "]]", function() require("illuminate")["goto_next_reference"](false) end, desc = "Next Reference" },
-      { "[[", function() require("illuminate")["goto_prev_reference"](false) end, desc = "Prev Reference" },
+      { "]]", mode = { "n", "v" } },
+      { "[[", mode = { "n", "v" } },
     },
   },
 
@@ -79,9 +79,6 @@ return {
   {
     "windwp/nvim-spectre",
     event = "VeryLazy",
-    keys = {
-      { "<leader>fR", function() require("spectre").open() end, desc = "Find & Replace in files (Spectre)" },
-    },
   },
 
   -- Highlight todo comments
