@@ -12,7 +12,7 @@ return {
         "marksman",
         "pyright",
         "rust_analyzer",
-        "sqls",
+        "sqlls",
         "lua_ls",
         "tsserver",
         "yamlls",
