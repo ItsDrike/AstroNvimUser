@@ -117,6 +117,7 @@ return {
   -- Highlight todo comments
   {
     "folke/todo-comments.nvim",
+    dependencies = { "trouble.nvim" },
     version = "*",
     cmd = { "TodoTrouble", "TodoTelescope" },
     event = { "BufReadPost", "BufNewFile" },
