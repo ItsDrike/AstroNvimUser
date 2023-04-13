@@ -21,6 +21,10 @@ local options = {
     autopairs_enabled = true,          -- enable autopairs at start
     diagnostics_enabled = true,        -- enable diagnostics at start
     status_diagnostics_enabled = true, -- enable diagnostics in statusline
+    markdown_fenced_languages = {      -- Mappings for markdown fenced languages syntax
+      "ts=typescript",
+      "py=python",
+    },
   },
 }
 
