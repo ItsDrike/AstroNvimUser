@@ -72,4 +72,16 @@ if is_available "trouble.nvim" then
   maps.n["<leader>xlt"] = { "<cmd>TroubleToggle lsp_type_definitions<cr>", desc = "Type definitions list" }
 end
 
+if is_available "todo-comments.nvim" then
+  maps.n["]t"] = { function() require("todo-comments").jump_next() end, desc = "Next todo comment" }
+  maps.n["[t"] = { function() require("todo-comments").jump_prev() end, desc = "Previous todo comment" }
+
+  maps.n["<leader>fT"] = { "<cmd>TodoTelescope<cr>", desc = "Find Todos" }
+
+  if maps.n["<leader>x"] ~= nil then
+    maps.n["<leader>xt"] = { "<cmd>TodoTrouble<cr>", desc = "Todo (Trouble)" }
+    maps.n["<leader>xT"] = { "<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme (Trouble)" }
+  end
+end
+
 return maps
