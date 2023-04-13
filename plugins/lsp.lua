@@ -52,7 +52,11 @@ return {
   },
 
   -- Hanlde LSP inlay hints (such as x: int, where `: int` is an inlay hint)
-  { "lvimuser/lsp-inlayhints.nvim", config = true },
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+    event = "User AstroFile",
+    config = true,
+  },
 
   -- Show function argument names and types as you're entering them
   {
