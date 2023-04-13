@@ -51,8 +51,10 @@ return {
     end,
   },
 
+  -- Hanlde LSP inlay hints (such as x: int, where `: int` is an inlay hint)
   { "lvimuser/lsp-inlayhints.nvim", config = true },
 
+  -- Show function argument names and types as you're entering them
   {
     "ray-x/lsp_signature.nvim",
     dependencies = { "neovim/nvim-lspconfig" },
