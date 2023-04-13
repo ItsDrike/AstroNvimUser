@@ -3,6 +3,13 @@ local is_available = utils.is_available
 
 local maps = { i = {}, n = {}, v = {}, t = {}, x = {} }
 
+local sections = {
+  x = { desc = " Trouble" },
+  xl = { desc = " LSP" },
+}
+
+if not vim.g.icons_enabled then vim.tbl_map(function(opts) opts.desc = opts.desc:gsub("^.* ", "") end, sections) end
+
 maps.n["<C-t>"] = { "<F7>", desc = "ToggleTerm float", remap = true }
 maps.t["<C-t>"] = { "<F7>", desc = "ToggleTerm float", remap = true }
 
@@ -47,6 +54,22 @@ end
 
 if is_available "nvim-spectre" then
   maps.n["<leader>fR"] = { function() require("spectre").open() end, desc = "Find & Replace in files (Spectre)" }
+end
+
+if is_available "trouble.nvim" then
+  maps.n["<leader>x"] = sections.x
+  maps.n["<leader>xx"] = { "<cmd>TroubleToggle<cr>", desc = "Toggle Trouble" }
+  maps.n["<leader>xw"] = { "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics" }
+  maps.n["<leader>xd"] = { "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document diagnostics" }
+  maps.n["<leader>xq"] = { "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix list" }
+  maps.n["<leader>xL"] = { "<cmd>TroubleToggle loclist<cr>", desc = "Location list" }
+  maps.n["<leader>xt"] = { "<cmd>TroubleToggle telescope<cr>", desc = "Open current telescope results in Trouble" }
+
+  maps.n["<leader>xl"] = sections.xl
+  maps.n["<leader>xlr"] = { "<cmd>TroubleToggle lsp_references<cr>", desc = "References list" }
+  maps.n["<leader>xld"] = { "<cmd>TroubleToggle lsp_definitions<cr>", desc = "Definitions list" }
+  maps.n["<leader>xli"] = { "<cmd>TroubleToggle lsp_implementations<cr>", desc = "Implementations list" }
+  maps.n["<leader>xlt"] = { "<cmd>TroubleToggle lsp_type_definitions<cr>", desc = "Type definitions list" }
 end
 
 return maps

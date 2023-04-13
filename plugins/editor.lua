@@ -82,6 +82,38 @@ return {
     config = true,
   },
 
+  -- Pretty list showing diagnostics, references, telescope results, quickfix and location lists
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-web-devicons" },
+    cmd = {
+      "Trouble",
+      "TroubleToggle",
+      "TroubleClose",
+      "TroubleRefresh",
+    },
+    opts = function()
+      local opts = {}
+      if vim.g.icons_enabled then
+        opts.icons = true
+        opts.fold_open = ""
+        opts.fold_closed = ""
+        opts.indent_lines = true
+      else
+        opts.icons = false
+        opts.fold_open = "V"
+        opts.fold_closed = ">"
+        opts.indent_lines = false
+      end
+
+      -- LSP signs already respects vim.g.icons_enabled
+      -- just inherit sign symbols from those
+      opts.use_diagnostic_signs = true
+
+      return opts
+    end,
+  },
+
   -- Highlight todo comments
   {
     "folke/todo-comments.nvim",
