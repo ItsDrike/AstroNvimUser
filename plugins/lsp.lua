@@ -13,7 +13,7 @@ return {
         "pyright",
         "rust_analyzer",
         "sqls",
-        "sumneko_lua",
+        "lua_ls",
         "tsserver",
         "yamlls",
       },
