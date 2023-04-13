@@ -20,6 +20,33 @@ return {
     },
   },
 
+  -- Auto-install some formatters/linnters
+  {
+    "jay-babu/mason-null-ls.nvim",
+    opts = {
+      ensure_installed = {
+        -- Formatters
+        "black",
+        "clang_format",
+        "isort",
+        "jq",
+        "prettierd",
+        "rustfmt",
+        "shfmt",
+        "stylua",
+
+        -- Linters
+        "yamllint",
+        "shellcheck",
+        "markdownlint",
+        "gitlint",
+        "luacheck",
+        "flake8",
+        --"mypy",
+      },
+    },
+  },
+
   {
     "jose-elias-alvarez/null-ls.nvim",
     opts = function(_, opts)
