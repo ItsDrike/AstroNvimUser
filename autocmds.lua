@@ -41,3 +41,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     if mark[1] > 0 and mark[1] <= lcount then pcall(vim.api.nvim_win_set_cursor, 0, mark) end
   end,
 })
+
+-- Resize splits if window got changed
+vim.api.nvim_create_autocmd({ "VimResized" }, {
+  callback = function() vim.cmd "tabdo wincmd =" end,
+  desc = "Resize splits if window is resized",
+})
