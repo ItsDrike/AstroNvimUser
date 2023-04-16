@@ -31,6 +31,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
   end,
+  desc = "Enable shellcheck and line wrap in text files",
 })
 
 -- Go to last loc when opening a buffer
@@ -40,6 +41,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     local lcount = vim.api.nvim_buf_line_count(0)
     if mark[1] > 0 and mark[1] <= lcount then pcall(vim.api.nvim_win_set_cursor, 0, mark) end
   end,
+  desc = "Go to last location when opening a buffer",
 })
 
 -- Resize splits if window got changed
