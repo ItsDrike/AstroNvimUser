@@ -1,7 +1,17 @@
 local utils = require "astronvim.utils"
 local is_available = utils.is_available
 
-local maps = { i = {}, n = {}, v = {}, t = {}, x = {} }
+local maps = {
+  i = {}, -- insert mode
+  n = {}, -- normal mode
+  x = {}, -- visual mode
+  s = {}, -- select mode (like visual, but typing text replaces the selection)
+  v = {}, -- visual and select mode
+  t = {}, -- terminal mode (when typing in :terminal buffer)
+  o = {}, -- operator pending mode (after "d", "y", "c", ...)
+  c = {}, -- command-line mode (when entering a ":" or "/" command)
+  l = {}, -- insert, command-line, lang-arg
+}
 
 local sections = {
   x = { desc = " Trouble" },
