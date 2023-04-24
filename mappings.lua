@@ -57,6 +57,16 @@ maps.n["-"] = { "<C-x>", desc = "Descrement number" }
 maps.x["+"] = { "g<C-a>", desc = "Increment number" }
 maps.x["-"] = { "g<C-x>", desc = "Descrement number" }
 
+-- add more text objects for "in" and "around"
+for _, char in ipairs { "_", ".", ":", ",", ";", "|", "/", "\\", "*", "+", "%", "`", "?" } do
+  for _, mode in ipairs { "x", "o" } do
+    maps[mode]["i" .. char] =
+    { string.format(":<C-u>silent! normal! f%sF%slvt%s<CR>", char, char, char), desc = "between " .. char }
+    maps[mode]["a" .. char] =
+    { string.format(":<C-u>silent! normal! f%sF%svf%s<CR>", char, char, char), desc = "around " .. char }
+  end
+end
+
 --
 -- Plugins
 --
