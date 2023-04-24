@@ -51,6 +51,12 @@ maps.n["cn"] = { "*``cgN" }
 maps.v["<"] = "<gv"
 maps.v[">"] = ">gv"
 
+-- better increment/decrement
+maps.n["+"] = { "<C-a>", desc = "Increment number" }
+maps.n["-"] = { "<C-x>", desc = "Descrement number" }
+maps.x["+"] = { "g<C-a>", desc = "Increment number" }
+maps.x["-"] = { "g<C-x>", desc = "Descrement number" }
+
 --
 -- Plugins
 --
