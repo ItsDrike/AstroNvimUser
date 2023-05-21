@@ -25,6 +25,9 @@ maps.t["<C-t>"] = { "<F7>", desc = "ToggleTerm float", remap = true }
 
 maps.n["<C-n>"] = { "<leader>e", desc = "Toggle Explorer", remap = true }
 
+-- Disable search highlights
+maps.n["<Esc>"] = { "<cmd>:noh<CR>", desc = "Disable search highlights" }
+
 -- Really useful for debugging highlights
 maps.n["<leader>uH"] = { "<cmd>Telescope highlights<cr>", desc = "Highlight groups" }
 
