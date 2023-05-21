@@ -1,4 +1,16 @@
 return {
+  -- Override some neo-tree settings
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          always_show = { ".github", ".gitignore" },
+        },
+      },
+    },
+  },
+
   -- Highlight references of token under cursor
   {
     "RRethy/vim-illuminate",
