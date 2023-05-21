@@ -219,4 +219,21 @@ return {
       require("indent_blankline").setup(opts)
     end,
   },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function(_, opts)
+      -- The configured characters used for indent git signs aren't supported in pure TTY
+      -- use different supported characters that look slightly worse, but also do the trick
+      if vim.g.tty then
+        opts.signs.add.text = "│"
+        opts.signs.change.text = "│"
+        opts.signs.delete.text = "_"
+        opts.signs.topdelete.text = "‾"
+        opts.signs.changedelete.text = "~"
+        opts.signs.untracked.text = "┆"
+      end
+      require("gitsigns").setup(opts)
+    end,
+  },
 }
