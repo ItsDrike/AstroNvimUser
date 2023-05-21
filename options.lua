@@ -23,26 +23,28 @@ local options = {
 -- Disable icons in the UI if in TTY (needs nerd-fonts)
 if os.getenv "TERM" == "linux" then
   options.g.icons_enabled = false
+  options.g.tty = true
 else
   options.g.icons_enabled = true -- Set to false here too if you don't have nerd-fonts
+  options.g.tty = false
 end
 
-if options.g.icons_enabled then
+if options.g.tty then
   options.opt.listchars = {
-    tab = " ", -- Tab
-    trail = "·", -- Trailing spaces
-    extends = "⟩", -- Character to show in last column when wrap is off and line continues
-    precedes = "⟨", -- Character to show in first column when there is text preceeding the first visible character
-    nbsp = "␣", -- Non-breaking space
+    tab = " ",              -- Tab
+    trail = "·",              -- Trailing spaces
+    extends = "⟩",           -- Character to show in last column when wrap is off and line continues
+    precedes = "⟨",          -- Character to show in first column when there is text preceeding the first visible character
+    nbsp = "␣",              -- Non-breaking space
   }
   options.opt.showbreak = "﬌ " -- String to put at the start of lines that have been wrapped.
 else
   options.opt.listchars = {
-    tab = "→ ", -- Tab
-    trail = "·", -- Trailing spaces
-    extends = "›", -- Character to show in last column when wrap is off and line continues
-    precedes = "‹", -- Character to show in first column when there is text preceeding the first visible character
-    nbsp = " ", -- Non-breaking space TODO: Needs better ASCII symbol
+    tab = "→ ",              -- Tab
+    trail = "·",              -- Trailing spaces
+    extends = "›",           -- Character to show in last column when wrap is off and line continues
+    precedes = "‹",          -- Character to show in first column when there is text preceeding the first visible character
+    nbsp = " ",                -- Non-breaking space TODO: Needs better ASCII symbol
   }
   options.opt.showbreak = "» " -- String to put at the start of lines that have been wrapped.
 end
