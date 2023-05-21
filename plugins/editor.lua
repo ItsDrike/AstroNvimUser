@@ -173,14 +173,16 @@ return {
           TEST = "⏲ ",
         }
       else
+        -- stylua removes trailing spaces in quotes
+        -- stylua: ignore
         icons = {
-          FIX = "[Fix] ",
-          TODO = "[Todo] ",
-          HACK = "[Hack] ",
-          WARN = "[Warn] ",
-          PERF = "[Perf] ",
-          NOTE = "[Note] ",
-          TEST = "[Test] ",
+          FIX = "F ",
+          TODO = "T ",
+          HACK = "H ",
+          WARN = "W ",
+          PERF = "P ",
+          NOTE = "N ",
+          TEST = "T ",
         }
       end
 
