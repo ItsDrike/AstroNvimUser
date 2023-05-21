@@ -41,7 +41,7 @@ return {
         "markdownlint",
         "gitlint",
         "luacheck",
-        "flake8",
+        -- "flake8", -- use locally found version of flake8 (with extensions)
         --"mypy",
       },
     },
