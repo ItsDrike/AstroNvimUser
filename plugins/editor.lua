@@ -210,13 +210,11 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function(_, opts)
-      -- The UTF character used for indent lines isn't supported in pure TTY,
-      -- we could set it to pure ASCII char such as "|", however that looks weird as it has gaps,
-      -- and is in the center of, not on a corner. Instead, we set it to an empty char, disabling
-      -- indent guides visibility when in TTY
+      -- The configured character used for indent lines isn't supported in pure TTY,
+      -- use a different supported character that looks slightly worse, but also does the trick
       if vim.g.tty then
-        opts.char = ""
-        opts.context_char = ""
+        opts.char = "│"
+        opts.context_char = "│"
       end
       require("indent_blankline").setup(opts)
     end,
