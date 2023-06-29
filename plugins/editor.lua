@@ -154,8 +154,8 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "trouble.nvim" },
     version = "*",
-    cmd = { "TodoTrouble", "TodoTelescope" },
-    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TodoTrouble", "TodoTelescope", "TodoLocList", "TodoQuickFix" },
+    event = { "User AstroFile" },
     opts = function()
       local opts = { search = {} }
 
