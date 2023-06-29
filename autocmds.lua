@@ -1,6 +1,5 @@
 -- Stop automatically removing search highlight on any key (I prefer :noh)
-vim.on_key(function()
-end, vim.api.nvim_create_namespace "auto_hlsearch")
+vim.on_key(function() end, vim.api.nvim_create_namespace "auto_hlsearch")
 
 -- close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {

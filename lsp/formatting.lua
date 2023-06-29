@@ -1,10 +1,10 @@
 return {
   enabled = true,
+  --allow_filetypes = { "lua" },
+  disabled = { "lua_ls" },
   ignore_filetypes = {
     "markdown",
     "python",
   },
-  --allow_filetypes = { "lua" },
-  --disabled = { "sumenko_lua", "rust_analyzer" },
   --timeout_ms = 3200
 }

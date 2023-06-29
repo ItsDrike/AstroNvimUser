@@ -31,20 +31,20 @@ end
 
 if options.g.tty then
   options.opt.listchars = {
-    tab = " ",              -- Tab
-    trail = "·",              -- Trailing spaces
-    extends = "⟩",           -- Character to show in last column when wrap is off and line continues
-    precedes = "⟨",          -- Character to show in first column when there is text preceeding the first visible character
-    nbsp = "␣",              -- Non-breaking space
+    tab = " ", -- Tab
+    trail = "·", -- Trailing spaces
+    extends = "⟩", -- Character to show in last column when wrap is off and line continues
+    precedes = "⟨", -- Character to show in first column when there is text preceeding the first visible character
+    nbsp = "␣", -- Non-breaking space
   }
   options.opt.showbreak = "﬌ " -- String to put at the start of lines that have been wrapped.
 else
   options.opt.listchars = {
-    tab = "→ ",              -- Tab
-    trail = "·",              -- Trailing spaces
-    extends = "›",           -- Character to show in last column when wrap is off and line continues
-    precedes = "‹",          -- Character to show in first column when there is text preceeding the first visible character
-    nbsp = " ",                -- Non-breaking space TODO: Needs better ASCII symbol
+    tab = "→ ", -- Tab
+    trail = "·", -- Trailing spaces
+    extends = "›", -- Character to show in last column when wrap is off and line continues
+    precedes = "‹", -- Character to show in first column when there is text preceeding the first visible character
+    nbsp = " ", -- Non-breaking space TODO: Needs better ASCII symbol
   }
   options.opt.showbreak = "» " -- String to put at the start of lines that have been wrapped.
 end
