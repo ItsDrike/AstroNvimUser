@@ -4,7 +4,7 @@ return {
     opts = {
       automatic_installation = false,
       ensure_installed = {
-        "clangd",
+        -- "clangd",  -- We use clangd_extensions plugin instead
         "cssls",
         "dockerls",
         "html",
