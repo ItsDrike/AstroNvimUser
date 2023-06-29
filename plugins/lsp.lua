@@ -85,6 +85,7 @@ return {
 
   -- Show LSP virtualtext diagnostics in a nicer way
   {
+    enabled = false,
     "Maan2003/lsp_lines.nvim",
     event = "User AstroFile",
     config = true,
