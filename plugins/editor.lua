@@ -5,7 +5,14 @@ return {
     opts = {
       filesystem = {
         filtered_items = {
-          always_show = { ".github", ".gitignore" },
+          always_show = {
+            ".github",
+            ".gitignore",
+            ".env",
+            ".pre-commit-config.yaml",
+            ".flake8",
+            "TODO",
+          },
         },
       },
     },
