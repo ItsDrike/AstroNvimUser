@@ -38,7 +38,6 @@ return {
         -- Linters
         "yamllint",
         "shellcheck",
-        "markdownlint",
         "gitlint",
         "luacheck",
         -- "flake8", -- use locally found version of flake8 (with extensions)
@@ -65,7 +64,6 @@ return {
         -- Linters
         null_ls.builtins.diagnostics.yamllint,
         null_ls.builtins.diagnostics.shellcheck,
-        null_ls.builtins.diagnostics.markdownlint,
         null_ls.builtins.diagnostics.gitlint,
         null_ls.builtins.diagnostics.luacheck,
         null_ls.builtins.diagnostics.flake8,
