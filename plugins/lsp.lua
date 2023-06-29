@@ -10,6 +10,8 @@ return {
         "html",
         "jsonls",
         "marksman",
+        "neocmake",
+        "jsonls",
         "pyright",
         "rust_analyzer",
         "sqlls",
