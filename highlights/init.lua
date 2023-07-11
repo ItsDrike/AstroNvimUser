@@ -1,12 +1,11 @@
 -- Add highlight groups in any theme
 -- These definitions are passed directly to vim.api.nvim_set_hl(0, group, spec)
 local highlights = {
-  -- Buffer line
-  BufferLineTabClose = { fg = "#1e222a", bg = "#1e222a" },
-  BufferLineBufferSelected = { fg = "#abb2bf", bg = "#1e222a" },
-  NormalNC = { fg = "#abb2bf", bg = "#1e222a" },
-  WinBar = { fg = "#5c6370", bg = "#1e222a" },
-  WinBarNC = { fg = "#5c6370", bg = "#1e222a" },
+  -- Spell
+  SpellBad = { sp = "#ffbba6", undercurl = true },
+  SpellCap = { sp = "#ffbba6", undercurl = true },
+  SpellLocal = { sp = "#ffbba6", undercurl = true },
+  SpellRare = { sp = "#ffbba6", undercurl = true },
   --VS code cmp colors
   CmpItemKindConstructor = { fg = "#f28b25" },
   CmpItemKindUnit = { fg = "#D4D4D4" },
@@ -36,39 +35,6 @@ local highlights = {
   CmpItemAbbrMatch = { fg = "#18a2fe", bold = true },
   CmpItemAbbrMatchFuzzy = { fg = "#18a2fe", bold = true },
   CmpItemMenu = { fg = "#777d86" },
-  -- VS code file tree colors
-  AerialArrayIcon = { fg = "" },
-  AerialClassIcon = { fg = "#f28b25" },
-  AerialConstantIcon = { fg = "#D4D4D4" },
-  AerialConstructorIcon = { fg = "#f28b25" },
-  AerialEnumIcon = { fg = "#9CDCFE" },
-  AeiralEnumMember = { fg = "#9CDCFE" },
-  AerialEventIcon = { fg = "#D4D4D4" },
-  AerialFieldIcon = { fg = "#9CDCFE" },
-  AerialFileIcon = { fg = "#D4D4D4" },
-  AerialFunctionIcon = { fg = "#C586C0" },
-  AerialInterfaceIcon = { fg = "#9CDCFE" },
-  AerialKeyIcon = { fg = "#D4D4D4" },
-  AerialMethodIcon = { fg = "#C586C0" },
-  AerialModuleIcon = { fg = "#D4D4D4" },
-  AerialNamespaceIcon = { fg = "#D4D4D4" },
-  AerialNullIcon = { fg = "#D4D4D4" },
-  AerialNumberIcon = { fg = "#D4D4D4" },
-  AerialObjectIcon = { fg = "#f28b25" },
-  AerialOperatorIcon = { fg = "#D4D4D4" },
-  AerialPackageIcon = { fg = "#D4D4D4" },
-  AerialPropertyIcon = { fg = "#D4D4D4" },
-  AerialStringIcon = { fg = "#9CDCFE" },
-  AerialStructIcon = { fg = "#f28b25" },
-  AerialTypeParameter = { fg = "#9CDCFE" },
-  AerialVariableIcon = { fg = "#9CDCFE" },
-  -- Spell
-  SpellBad = { sp = "#ffbba6", undercurl = true },
-  SpellCap = { sp = "#ffbba6", undercurl = true },
-  SpellLocal = { sp = "#ffbba6", undercurl = true },
-  SpellRare = { sp = "#ffbba6", undercurl = true },
-  -- Inlay hint
-  LspInlayHint = { fg = "#777d86" },
   -- LSP Semantic token highlights for robot-framework
   ["@lsp.type.variable.robot"] = { fg = "#9cdcfe" },
   ["@lsp.type.comment.robot"] = { fg = "#6a9955" },
