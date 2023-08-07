@@ -1,6 +1,6 @@
 local options = {
   opt = {
-    wrap = true, -- sets vim.opt.wrap
+    wrap = true, -- enable line wrapping
     -- foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     -- foldmethod = "expr",
     linebreak = true, -- linebreak soft wrap at words
