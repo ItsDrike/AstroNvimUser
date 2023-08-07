@@ -12,6 +12,7 @@ return {
         "marksman",
         "neocmake",
         "jsonls",
+        "taplo",
         "pyright",
         "rust_analyzer",
         "sqlls",
