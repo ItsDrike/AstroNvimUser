@@ -35,27 +35,9 @@ local highlights = {
   CmpItemAbbrMatch = { fg = "#18a2fe", bold = true },
   CmpItemAbbrMatchFuzzy = { fg = "#18a2fe", bold = true },
   CmpItemMenu = { fg = "#777d86" },
-  -- LSP Semantic token highlights for robot-framework
-  ["@lsp.type.variable.robot"] = { fg = "#9cdcfe" },
-  ["@lsp.type.comment.robot"] = { fg = "#6a9955" },
-  ["@lsp.type.header.robot"] = { fg = "#4ec9b0" },
-  ["@lsp.type.setting.robot"] = { fg = "#c177da" },
-  ["@lsp.type.name.robot"] = { fg = "#e1bd78" },
-  ["@lsp.type.variableOperator.robot"] = { fg = "#d4d4d4" },
-  ["@lsp.type.settingsOperator.robot"] = { fg = "#d4d4d4" },
-  ["@lsp.type.keywordNameDefinition.robot"] = { fg = "#dcdcaa" },
-  ["@lsp.type.keywordNameCall.robot"] = { fg = "#569cd6" },
-  ["@lsp.type.control.robot"] = { fg = "#c586c0" },
-  ["@lsp.type.testCaseName.robot"] = { fg = "#dcdcaa" },
-  ["@lsp.type.parameterName.robot"] = { fg = "#9cdcfe" },
-  ["@lsp.type.argumentValue.robot"] = { fg = "#ce9178" },
-  ["@lsp.type.error.robot"] = { fg = "#f44747" },
-  ["@lsp.type.documentation.robot"] = { fg = "#6a9955" },
-  -- Treesitter HTML highlight overrides
-  ["@tag.attribute.html"] = { link = "Type" },
 }
 
--- By default, the highlights specified above will compltely override whatever prevous
+-- By default, the highlights specified above will completely override whatever previous
 -- highlight definition that group had with specified new rules. Highlights specified here
 -- will only update the existing definitions, overriding what was specified, but leaving
 -- the rest unchanged.
@@ -81,11 +63,19 @@ local update_highlights = {
   Conditional = { ctermfg = 5 },
   Comment = { ctermfg = 7 },
   Character = { ctermfg = 2 },
-  Constant = { ctermfg = 15 },
+  Constant = { ctermfg = 11 },
   Identifier = { ctermfg = 14 },
+  Type = { ctermfg = 14 },
+  String = { ctermfg = 2 },
+  Boolean = { ctermfg = 3 },
+  Number = { ctermfg = 3 },
+  Repeat = { ctermfg = 13 },
+  Keyword = { ctermfg = 13 },
+  Tag = { ctermfg = 9 },
+  ["@property"] = { ctermfg = 9 },
   ["@variable"] = { ctermfg = 9 },
   ["@function"] = { ctermfg = 14 },
-  Type = { ctermfg = 14 },
+  ["@tag"] = { ctermfg = 9 },
 }
 
 for group, new_spec in pairs(update_highlights) do
