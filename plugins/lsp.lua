@@ -19,6 +19,7 @@ return {
         "lua_ls",
         "tsserver",
         "yamlls",
+        "ruff-lsp",
       },
     },
   },
@@ -43,6 +44,7 @@ return {
         "shellcheck",
         "gitlint",
         "luacheck",
+        "ruff",
         -- "flake8", -- use locally found version of flake8 (with extensions)
         --"mypy",
       },
@@ -69,7 +71,7 @@ return {
         null_ls.builtins.diagnostics.shellcheck,
         null_ls.builtins.diagnostics.gitlint,
         null_ls.builtins.diagnostics.luacheck,
-        null_ls.builtins.diagnostics.flake8,
+        -- null_ls.builtins.diagnostics.flake8,
         -- null_ls.builtins.diagnostics.mypy,
 
         -- Extra
