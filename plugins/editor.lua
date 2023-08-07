@@ -13,6 +13,7 @@ return {
             ".env",
             ".pre-commit-config.yaml",
             ".flake8",
+            ".gitlab-ci",
             "TODO",
           },
         },
