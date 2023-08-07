@@ -34,7 +34,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
   end,
-  desc = "Enable shellcheck and line wrap in text files",
+  desc = "Enable spellcheck and line wrap in text files",
 })
 
 -- Go to last loc when opening a buffer
