@@ -377,4 +377,19 @@ return {
     ft = { "markdown" },
     opts = {},
   },
+
+  -- Toggle term settings
+  {
+    "akinsho/toggleterm.nvim",
+    opts = {
+      highlights = {
+        -- NormalFloat = {
+        --   guibg = "#222222",
+        -- },
+        FloatBorder = {
+          guifg = "#ff0000",
+        },
+      },
+    },
+  },
 }
