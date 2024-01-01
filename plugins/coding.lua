@@ -67,6 +67,22 @@ return {
       end
     end,
   },
+
+  {
+    "barklan/capslock.nvim",
+    dependencies = {
+      {
+        "heirline.nvim",
+        opts = function(_, opts) table.insert(opts, require("capslock").status_string) end,
+      },
+    },
+    event = "BufEnter",
+    keys = {
+      { "<C-l>", "<Plug>CapsLockToggle", desc = "Toggle CapsLock (soft)", mode = "i" },
+    },
+    config = true,
+  },
+
   -- { "ziontee113/syntax-tree-surfer" },
   -- { "andymass/vim-matchup" },
 }
