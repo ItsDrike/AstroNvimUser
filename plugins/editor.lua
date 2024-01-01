@@ -223,8 +223,8 @@ return {
       -- The configured character used for indent lines isn't supported in pure TTY,
       -- use a different supported character that looks slightly worse, but also does the trick
       if vim.g.tty then
-        opts.char = "│"
-        opts.context_char = "│"
+        opts.indent.char = "│"
+        opts.indent.context_char = "│"
       end
       require("ibl").setup(opts)
     end,
