@@ -5,6 +5,7 @@ local options = {
     -- foldmethod = "expr",
     linebreak = true, -- linebreak soft wrap at words
     list = true, -- show some invisible characters (tabs...)
+    spell = true, -- Enable spellcheck
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
