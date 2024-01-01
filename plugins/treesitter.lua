@@ -7,6 +7,19 @@ return {
       -- Except these
       --ignore_install = { "html" }
     },
+    config = function(_, opts)
+      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+      parser_config.hypr = {
+        install_info = {
+          url = "https://github.com/luckasRanarison/tree-sitter-hypr",
+          files = { "src/parser.c" },
+          branch = "master",
+        },
+        filetype = "hypr",
+      }
+
+      require("nvim-treesitter.configs").setup(opts)
+    end,
   },
 
   -- Syntax aware text-objects, select, move, swap, and peek support.
@@ -23,6 +36,14 @@ return {
       "TSHighlightCapturesUnderCursor",
       "TSPlaygroundToggle",
     },
+    dependencies = { "nvim-treesitter" },
+  },
+
+  -- Syntax highlighting, folds and filetype detection for Hyprland config files
+  -- (Note: This doesn't install the `hypr` treesitter parser itself)
+  {
+    "luckasRanarison/tree-sitter-hypr",
+    event = "BufReadPost",
     dependencies = { "nvim-treesitter" },
   },
 }
