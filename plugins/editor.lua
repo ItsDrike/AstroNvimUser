@@ -226,7 +226,7 @@ return {
         opts.char = "│"
         opts.context_char = "│"
       end
-      require("indent_blankline").setup(opts)
+      require("ibl").setup(opts)
     end,
   },
 
