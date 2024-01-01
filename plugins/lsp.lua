@@ -19,7 +19,7 @@ return {
         "lua_ls",
         "tsserver",
         "yamlls",
-        "ruff-lsp",
+        "ruff_lsp",
       },
     },
   },
