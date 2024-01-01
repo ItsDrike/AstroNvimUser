@@ -60,6 +60,8 @@ maps.n["-"] = { "<C-x>", desc = "Descrement number" }
 maps.x["+"] = { "g<C-a>", desc = "Increment number" }
 maps.x["-"] = { "g<C-x>", desc = "Descrement number" }
 
+maps.n["<C-a>"] = { "gg<S-v>G", desc = "Select all" }
+
 -- add more text objects for "in" and "around"
 for _, char in ipairs { "_", ".", ":", ",", ";", "|", "/", "\\", "*", "+", "%", "`", "?" } do
   for _, mode in ipairs { "x", "o" } do
