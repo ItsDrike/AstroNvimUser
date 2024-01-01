@@ -19,7 +19,7 @@ return {
         "lua_ls",
         "tsserver",
         "yamlls",
-        "ruff_lsp",
+        -- "ruff_lsp",
       },
     },
   },
@@ -31,7 +31,7 @@ return {
       ensure_installed = {
         -- Formatters
         "black",
-        "clang_format",
+        -- "clang_format",
         "isort",
         "jq",
         "prettierd",
@@ -62,7 +62,7 @@ return {
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.jq,
         null_ls.builtins.formatting.isort,
-        null_ls.builtins.formatting.clang_format,
+        -- null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.rustfmt,
         null_ls.builtins.formatting.shfmt.with { args = { "-i", "2" } },
 
