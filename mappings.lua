@@ -48,7 +48,7 @@ maps.v["<A-p>"] = { '"_dP' }
 
 -- Quick word replacing (allowing . for next word replace)
 maps.n["cn"] = { "*``cgn" }
-maps.n["cn"] = { "*``cgN" }
+maps.n["cN"] = { "*``cgN" }
 
 -- Stay in indent mode (astro vim also has <Tab>/<S-Tab>)
 maps.v["<"] = "<gv"
