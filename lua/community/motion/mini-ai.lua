@@ -11,7 +11,7 @@ return {
   },
 
   {
-    "echansovski/mini.ai",
+    "echasnovski/mini.ai",
     opts = function()
       local ai = require "mini.ai"
       return {
