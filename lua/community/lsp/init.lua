@@ -14,7 +14,7 @@ return {
   "AstroNvim/astrocommunity",
 
   { import = "astrocommunity.lsp.delimited-nvim" }, -- Visually highlight the range of diagnostic
-  { import = "astrocommunity.lsp.garbage-day-nvim" }, -- Stops inactive LSP clients to ree up RAM
+  --{ import = "astrocommunity.lsp.garbage-day-nvim" }, -- Stops inactive LSP clients to ree up RAM
   { import = "astrocommunity.lsp.lsp-signature-nvim" }, -- Better function signature hints
   { import = "astrocommunity.lsp.lsplinks-nvim" }, -- Support for LSP textDocument/documentLink (opening links with gx)
   { import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Support for LSP file operations by integrating with nvim-tree and neo-tree
