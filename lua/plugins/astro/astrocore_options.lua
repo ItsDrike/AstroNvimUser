@@ -14,7 +14,7 @@ return {
         opt = { -- vim.opt.<key>
           number = true,
           relativenumber = true,
-          signcolumn = "auto", -- only show sign column if there are signs to be shown
+          signcolumn = "yes", -- always show the sign column even if there are no signs to be shown
           wrap = true, -- enable line wrapping
           linebreak = true, -- linebrake soft wrap at words
           spell = true, -- spell check everywhere (supports treesitter, so only comments/strings are chcked in most langs)
