@@ -11,6 +11,6 @@
 return {
   {
     "AstroNvim/astrocommunity",
-    --{ import = "astrocommunity.pack.nix" },
+    { import = "astrocommunity.pack.nix" },
   },
 }
