@@ -108,7 +108,7 @@ local function get_highlights(colors_name)
   }
 
   for group, new_spec in pairs(update_highlights) do
-    local current_spec = vim.api.nvim_get_hl_by_name(group, true)
+    local current_spec = vim.api.nvim_get_hl(0, { name = group, link = false })
     highlights[group] = vim.tbl_extend("keep", current_spec, new_spec)
   end
 

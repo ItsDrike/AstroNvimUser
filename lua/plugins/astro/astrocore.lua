@@ -3,7 +3,6 @@
 --
 -- Configuration for this plugin is split into multiple files:
 -- astrocore.lua (this file): general options
--- astrocore_autocmds.lua: Auto commands
 -- astrocore_mappings.lua: Keymaps definitions
 -- astrocore_options.lua: Vim options (vim.opt)
 

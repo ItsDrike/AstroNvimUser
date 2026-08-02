@@ -1,6 +1,6 @@
 # My AstroNvim configuration
 
-**NOTE:** This is for AstroNvim v4+
+**NOTE:** This is for AstroNvim v6+
 
 This configuration was built upon the [default starting template](https://github.com/AstroNvim/template).
 

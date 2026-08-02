@@ -1,7 +1,5 @@
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
--- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
---       as this provides autocomplete and documentation while editing
 
 ---@type LazySpec
 return {
@@ -13,7 +11,7 @@ return {
       options = {
         opt = { -- vim.opt.<key>
           number = true,
-          relativenumber = true,
+          relativenumber = false,
           signcolumn = "yes", -- always show the sign column even if there are no signs to be shown
           wrap = true, -- enable line wrapping
           linebreak = true, -- linebrake soft wrap at words
@@ -28,13 +26,6 @@ return {
           showbreak = get_icon("CharShowbreak", 1), -- String to put at the start of lines that have been wrapped.
         },
         g = { -- vim.g.<key>
-          -- configure global vim variables (vim.g)
-          -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
-          -- This can be found in the `lua/lazy_setup.lua` file
-          markdown_fenced_languages = { -- Mappings for markdown fenced languages syntax
-            "ts=typescript",
-            "py=python",
-          },
         },
       },
     } --[[@as AstroCoreOpts]])
