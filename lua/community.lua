@@ -67,4 +67,6 @@ return {
       },
     },
   },
+
+  { import = "astrocommunity.search.nvim-spectre" }, -- project wide find & replace
 }
