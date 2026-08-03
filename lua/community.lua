@@ -41,6 +41,7 @@ return {
   -- UI
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
   -- Other
   { import = "astrocommunity.git.blame-nvim" },
