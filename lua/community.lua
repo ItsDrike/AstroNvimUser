@@ -5,6 +5,8 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+
+  -- Languages
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.yaml" },
@@ -36,6 +38,10 @@ return {
     },
   },
 
+  -- UI
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+
+  -- Other
+  { import = "astrocommunity.git.blame-nvim" },
 }
