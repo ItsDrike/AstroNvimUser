@@ -23,19 +23,16 @@ return {
   { import = "astrocommunity.pack.python.ruff" },
   { import = "astrocommunity.pack.rust" },
   {
-    import = "astrocommunity.pack.rust",
-    dependencies = {
-      "AstroNvim/astrolsp",
-      ---@type AstroLSPOpts
-      opts = {
-        ["rust-analyzer"] = {
-          -- Make rust-analyzer use its own profile
-          -- (This will give rust-analyzer its own folder in target/, allowing `cargo build`
-          -- to run without being blocked by rust-analyzer runs. This will increase disk usage)
-          cargo = {
-            extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
-            extraArgs = { "--profile", "rust-analyzer" },
-          },
+    "AstroNvim/astrolsp",
+    ---@type AstroLSPOpts
+    opts = {
+      ["rust-analyzer"] = {
+        -- Make rust-analyzer use its own profile
+        -- (This will give rust-analyzer its own folder in target/, allowing `cargo build`
+        -- to run without being blocked by rust-analyzer runs. This will increase disk usage)
+        cargo = {
+          extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+          extraArgs = { "--profile", "rust-analyzer" },
         },
       },
     },
