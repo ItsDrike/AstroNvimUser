@@ -43,6 +43,13 @@ return {
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
+  -- LSP
+  -- { import = "astrocommunity.lsp.delimited-nvim" }, -- Visually highlight the range of diagnostic
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" }, -- Better function signature hints
+  -- { import = "astrocommunity.lsp.lsplinks-nvim" }, -- Support for LSP textDocument/documentLink (opening links with gx)
+  { import = "astrocommunity.lsp.nvim-lsp-file-operations" }, -- Support for LSP file operations by integrating with neo-tree
+  -- { import = "astrocommunity.syntax.hlargs-nvim" }, -- highlight function argument variables
+
   -- Other
   { import = "astrocommunity.git.blame-nvim" },
 }
