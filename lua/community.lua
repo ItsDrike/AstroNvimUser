@@ -52,4 +52,19 @@ return {
 
   -- Other
   { import = "astrocommunity.git.blame-nvim" },
+  { import = "astrocommunity.git.codediff-nvim" },
+  {
+    "AstroNvim/astrocore",
+    ---@type AstroCoreOpts
+    opts = {
+      mappings = {
+        n = {
+          ["<Leader>gd"] = { "<cmd>CodeDiff<CR>", desc = "Project Git Diff" },
+          ["<Leader>gD"] = { "<cmd>CodeDiff file HEAD<CR>", desc = "File Git Diff" },
+          ["<Leader>gh"] = { "<cmd>CodeDiff history<CR>", desc = "Project Git History" },
+          ["<Leader>gH"] = { "<cmd>CodeDiff history %<CR>", desc = "File Git History" },
+        },
+      },
+    },
+  },
 }
