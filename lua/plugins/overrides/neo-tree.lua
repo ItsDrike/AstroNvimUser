@@ -8,8 +8,8 @@ return {
       -- (works better when working with projects that do a lot of dir nesting)
       default_component_configs = {
         indent = {
-          indent_size = 2,
-          padding = 0,
+          indent_size = 1,
+          padding = 1,
           with_markers = true,
           with_expanders = true,
         },
