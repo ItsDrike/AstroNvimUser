@@ -40,6 +40,14 @@ return {
 
   -- UI
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  {
+    "rebelot/heirline.nvim",
+    opts = function (_, opts)
+      local status = require("astroui.status")
+
+      table.insert(opts.statusline, 7, status.component.cmd_info())
+    end
+  },
   { import = "astrocommunity.recipes.heirline-vscode-winbar" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
 
