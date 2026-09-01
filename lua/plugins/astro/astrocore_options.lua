@@ -13,7 +13,7 @@ return {
           number = true,
           relativenumber = false,
           signcolumn = "yes", -- always show the sign column even if there are no signs to be shown
-          wrap = true, -- enable line wrapping
+          wrap = false, -- disable line wrapping
           linebreak = true, -- linebrake soft wrap at words
           spell = true, -- spell check everywhere (supports treesitter, so only comments/strings are chcked in most langs)
           listchars = {

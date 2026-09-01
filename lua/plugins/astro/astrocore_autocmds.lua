@@ -20,6 +20,14 @@ return {
           callback = function() vim.opt_local.spell = false end,
         },
       },
+      enable_wrap_for_prose = {
+        {
+          event = "FileType",
+          pattern = { "markdown", "text" },
+          desc = "Enable line wrapping for prose files",
+          callback = function() vim.opt_local.wrap = true end,
+        },
+      },
     },
     -- Disable AstroNvim's custom hlsearch overrides
     on_keys = {
