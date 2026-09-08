@@ -16,6 +16,7 @@ return {
           wrap = false, -- disable line wrapping
           linebreak = true, -- linebrake soft wrap at words
           spell = true, -- spell check everywhere (supports treesitter, so only comments/strings are chcked in most langs)
+          list = true, -- show the listchars below explicitly
           listchars = {
             tab = get_icon "CharTab", -- Tab
             trail = get_icon "CharTrail", -- Trailing spaces
